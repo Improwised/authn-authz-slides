@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Authn & Authz</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+	<style>
+		#improwised_logo {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			height: 75px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="hidden">
+		<div id="header">
+			<img id="improwised_logo" src="https://www.improwised.com/img/logo.png" alt="Improwised Technologies">
+		</div>
+	</div>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>Authentication & Authorization</h1>
+			</section>
+			<section>
+				<h2>Aka</h2>
+				<h1>Authn & Authz</h1>
+			</section>
+			<section data-markdown>
+				<textarea data-template>
+						## What we will cover...
+						- Password based Auth
+						- Muti-Factor Auth 
+						- Token based Auth 
+						- OAuth 
+						- RBAC 
+						- Session 
+						- Sessionless 
+					</textarea>
+			</section>
+			<section>
+				<section>
+					<h3>Authen that you think</h3>
+					<img src="./assets/login-page.jpg">
+				</section>
+				<section>
+					<h3>Authen that client want</h3>
+					<img src="./assets/login-with.jpeg">
+				</section>
+				<section>
+					<h3>Authen that client want</h3>
+					<img src="./assets/mfa.png">
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Let's understand how authn works</h2>
+					<img src="./assets/password-auth.jpg">
+				</section>
+				<section>
+					<h2>We need now more servers</h2>
+					<img src="./assets/password-auth-multi.jpg">
+				</section>
+				<section>
+					<h2>We need now multi products</h2>
+					<img src="./assets/multi-product.jpg" style="height: 400px;">
+				</section>
+				<section>
+					<h2>Single Sign On</h2>
+					<img src="./assets/sso.jpg" style="height: 400px;">
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2 style="margin-top: -30%;">Solutions</h2>
+					<div style="position: fixed;">
+						<img src="./assets/authentik.png" style="height: 200px; width: 400px; position: relative;">
+						<img src="./assets/kratos.jpg" style="height: 200px; width: 400px; position: relative;">
+					</div>
+				</section>	
+				<section data-markdown>
+					<textarea data-template>
+								## Why?
+								- Open Source
+								- Delegate responsibility
+								- Distributed apps
+								- Single Source (Single Sign On)
+					</textarea>
+				</section>	
+			</section>
+			<section>
+				<h3>Thank you</h3>
+				You can find this presentation at https://github.com/Improwised/authn-authz-slides
+			</section>
+		</div>
+	</div>
+
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true }
+			]
+		});
+	</script>
+</body>
+
+</html>
