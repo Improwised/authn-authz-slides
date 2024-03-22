@@ -56,7 +56,8 @@
 						- OAuth 
 						- RBAC 
 						- Session 
-						- Sessionless 
+						- Sessionless
+						- How to make it easy
 					</textarea>
 			</section>
 			<section>
@@ -93,12 +94,71 @@
 			</section>
 			<section>
 				<section>
+					<h2>OIDC</h2>
+					<p>Open ID Connect verifies that users are who they say they are</p>
+					<p class="fragment">OIDC is an identity authentication protocol that is an extension of open authorization (OAuth) 2.0</p>
+				</section>
+				<section>
+					<h2>OAuth 2.0</h2>
+					<p>OAuth stands for Open Authorization</p>
+					<p class="fragment">OAuth is a technological standard that allows you to authorize one app or service to sign in to another without divulging private information, such as passwords.</p>
+				</section>	
+			</section>
+			<section>
+				<section>
+					<h2>RBAC</h2>
+					<p>
+						Role-based access control (RBAC) refers to the idea of assigning permissions to users based on their role within an organization. It offers a simple, manageable approach to access management that is less prone to error than assigning permissions to users individually.
+					</p>
+				</section>
+				<section>
+					<h2>RBAC</h2>
+					<img src="./assets/rbac.png" style="height: 400px;">
+				</section>	
+			</section>
+			<section>
+				<section>
+					<h3>JSON Web TOKEN (JWT)</h3>
+					<p class="fragment">Header</p>
+					<p class="fragment">Payload</p>
+					<p class="fragment">Signature</p>
+				</section>
+				<section>
+					<h2>header</h2>
+					<pre>
+						<code>
+{
+	"alg": "HS256",
+	"typ": "JWT"
+}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h2>Payload</h2>
+					<pre>
+						<code>
+{
+	"sub": "1234567890",
+	"name": "John Doe",
+	"admin": true,
+	"iat": 1516239022
+}						</code>
+					</pre>
+				</section>
+				<section>
+					<h3>JSON Web TOKEN (JWT)</h3>
+					<img src="./assets/jwt.png" style="height: 500px;">
+				</section>
+			</section>
+			<section>
+				<section>
 					<h2 style="margin-top: -30%;">Solutions</h2>
 					<div style="position: fixed;">
 						<img src="./assets/authentik.png" style="height: 200px; width: 400px; position: relative;">
 						<img src="./assets/kratos.jpg" style="height: 200px; width: 400px; position: relative;">
 					</div>
-				</section>	
+				</section>
 				<section data-markdown>
 					<textarea data-template>
 								## Why?
@@ -107,7 +167,7 @@
 								- Distributed apps
 								- Single Source (Single Sign On)
 					</textarea>
-				</section>	
+				</section>
 			</section>
 			<section>
 				<h3>Thank you</h3>
